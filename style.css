@@ -13,8 +13,16 @@
 body{
     min-width: 50%;
     background-color: var(--light);
+    transition: 0.2s linear;
 }
 
+.dark{
+    background-color: var(--dark);
+}
+
+.light{
+    background-color: var(--light);
+}
 .main{
    display: flex;
    justify-content: center;

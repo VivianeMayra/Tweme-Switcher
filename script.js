@@ -1,16 +1,34 @@
 //Função responsável pela troca de imagens
+
 let minhaImagem= document.querySelector('img');
+let body= document.querySelector('body');
 
-minhaImagem.onclick= function(){
+minhaImagem.addEventListener('click', () => {
+    if(body.getAttribute('class') === 'light') {
+        minhaImagem.setAttribute('src', './image/dark.png')
+        body.setAttribute('class', 'dark')
+    } else {
+        minhaImagem.setAttribute('src', './image/light.png')
+        body.setAttribute('class', 'light')
+    }
+})
 
-    let meuSrc = minhaImagem.getAttribute('src');
-    if(meuSrc === './image/Switcher (1).png' ) {
-        minhaImagem.setAttribute('src', 'image/Switcher.png');
+/*JEITO ANTIGO
 
+minhaImagem.onclick= function(e){
+    if(meuSrc === './image/light.png' ) {
+         console.log("oii")
+         minhaImagem.setAttribute('src', 'image/dark.png');
+        body.setAttribute('class', 'dark');
     }
     else{
-        minhaImagem.setAttribute('src', 'image/Switcher (1).png');
-    }
-
+        console.log("teteu")
+        minhaImagem.setAttribute('src', 'image/light.png');
+        body.setAttribute('class', 'light');
+     }
 }
+*/
+
+
+
 
